@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Infinitely scrolling horizontal telemetry ticker tape line stream */
+@keyframes tickerMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+
+.animate-ticker {
+  display: inline-block;
+  animation: tickerMove 25s linear infinite;
+}
+
+/* Vertical HUD cybernetic laser scanner line sweep overlay */
+@keyframes laserSweep {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(420px); }
+}
+
+.animate-scanline {
+  animation: laserSweep 4s ease-in-out infinite alternate;
+}
