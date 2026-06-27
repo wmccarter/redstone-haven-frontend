@@ -13,7 +13,7 @@ export default function Home() {
       <header className="relative z-10 max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between border-b border-slate-800/60 backdrop-blur-sm bg-[#020617]/40">
         <div className="flex items-center space-x-3 mb-4 md:mb-0 group cursor-pointer">
           <div className="relative w-10 h-10 shrink-0 transition-transform duration-500 group-hover:rotate-12">
-            <Image src="/logo.png" alt="Redstone Haven Logo" width={40} height={40} className="object-contain" priority />
+            <Image src="/logo_v2.png" alt="Redstone Haven Logo" width={40} height={40} className="object-contain" priority />
           </div>
           <div>
             <span className="text-base font-bold tracking-widest text-white block transition-colors group-hover:text-[#E67E22]">REDSTONE HAVEN</span>
