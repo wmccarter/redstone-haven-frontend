@@ -1,0 +1,11 @@
+Hero now uses a single file path:
+
+/videos/hero-main.mp4
+
+Place your edited final video at:
+public/videos/hero-main.mp4
+
+Notes:
+- Audio is enabled in the hero player.
+- Browser autoplay with sound may be blocked until user interacts.
+- Video controls are visible so users can play/unmute immediately.

@@ -20,3 +20,452 @@
 .animate-scanline {
   animation: laserSweep 4s ease-in-out infinite alternate;
 }
+
+@keyframes bootPanelReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introScanline {
+  0% {
+    transform: translateY(-8px);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0.4;
+  }
+}
+
+@keyframes panelRise {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes telemetryBeat {
+  0%,
+  100% {
+    opacity: 0.75;
+    text-shadow: 0 0 0 rgba(125, 211, 252, 0);
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(125, 211, 252, 0.45);
+  }
+}
+
+@keyframes portalFlicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.82;
+  }
+  55% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 0.9;
+  }
+}
+
+.animate-boot-panel {
+  opacity: 0;
+  animation: bootPanelReveal 420ms ease-out forwards;
+}
+
+.animate-intro-scanline {
+  animation: introScanline 2.6s linear infinite;
+}
+
+.animate-panel-rise {
+  animation: panelRise 420ms ease-out both;
+}
+
+.animate-telemetry-beat {
+  animation: telemetryBeat 1.6s ease-in-out infinite;
+}
+
+.animate-portal-flicker {
+  animation: portalFlicker 2.2s ease-in-out infinite;
+}
+
+@keyframes missionCardLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes missionRowReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes missionBarGrow {
+  0% {
+    transform: scaleX(0);
+    filter: saturate(85%);
+  }
+  70% {
+    transform: scaleX(1.03);
+    filter: saturate(120%);
+  }
+  100% {
+    transform: scaleX(1);
+    filter: saturate(100%);
+  }
+}
+
+.animate-mission-card-load {
+  transform-origin: center;
+  animation: missionCardLoad 520ms ease-out both;
+}
+
+.animate-mission-row-reveal {
+  opacity: 0;
+  animation: missionRowReveal 380ms ease-out both;
+}
+
+.animate-mission-bar-grow {
+  transform-origin: left center;
+  animation: missionBarGrow 760ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes aboutSectionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aboutEnergyFlow {
+  0% {
+    transform: translateX(-8%) translateY(0%);
+  }
+  50% {
+    transform: translateX(8%) translateY(1%);
+  }
+  100% {
+    transform: translateX(-8%) translateY(0%);
+  }
+}
+
+@keyframes aboutConduitPulse {
+  0% {
+    background-position: -140% 0;
+    opacity: 0.35;
+  }
+  45% {
+    opacity: 0.9;
+  }
+  100% {
+    background-position: 140% 0;
+    opacity: 0.35;
+  }
+}
+
+@keyframes aboutCardAura {
+  0%,
+  100% {
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(56, 189, 248, 0.08);
+  }
+  50% {
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(56, 189, 248, 0.22);
+  }
+}
+
+@keyframes aboutEnergyRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.12);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.35);
+    opacity: 0;
+  }
+}
+
+@keyframes aboutSpinePulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    box-shadow: 0 0 0 rgba(125, 211, 252, 0);
+  }
+  50% {
+    opacity: 0.95;
+    box-shadow: 0 0 18px rgba(125, 211, 252, 0.45);
+  }
+}
+
+@keyframes aboutNodePulse {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(0.82);
+    box-shadow: 0 0 0 rgba(125, 211, 252, 0);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.16);
+    box-shadow: 0 0 16px rgba(125, 211, 252, 0.62);
+  }
+}
+
+.about-living-network::before {
+  content: '';
+  position: absolute;
+  inset: -32px -24px;
+  z-index: -20;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(56, 189, 248, 0.12), transparent 45%),
+    radial-gradient(circle at 72% 76%, rgba(16, 185, 129, 0.11), transparent 43%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.about-energy-ribbon {
+  background:
+    linear-gradient(115deg, transparent 10%, rgba(56, 189, 248, 0.25) 32%, transparent 56%),
+    linear-gradient(245deg, transparent 16%, rgba(16, 185, 129, 0.22) 46%, transparent 70%);
+  opacity: 0.82;
+  animation: aboutEnergyFlow 6.8s ease-in-out infinite;
+}
+
+.about-energy-conduit {
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.22) 25%, rgba(125, 211, 252, 0.9) 50%, rgba(16, 185, 129, 0.22) 75%, transparent 100%);
+  background-size: 220% 100%;
+  box-shadow: 0 0 10px rgba(125, 211, 252, 0.35);
+  animation: aboutConduitPulse 5.2s linear infinite;
+}
+
+.about-network-spine {
+  background: linear-gradient(to bottom, transparent, rgba(125, 211, 252, 0.75) 18%, rgba(52, 211, 153, 0.75) 52%, transparent 100%);
+  animation: aboutSpinePulse 2.8s ease-in-out infinite;
+}
+
+.about-node-pulse {
+  animation: aboutNodePulse 2.2s ease-in-out infinite;
+}
+
+.about-live-card {
+  animation: aboutCardAura 4.8s ease-in-out infinite;
+}
+
+.about-hover-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+.about-hover-card::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 180%;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(125, 211, 252, 0.4) 0%, rgba(52, 211, 153, 0.22) 34%, rgba(15, 23, 42, 0) 68%);
+  transform: translate(-50%, -50%) scale(0.12);
+}
+
+.about-hover-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hover-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(125, 211, 252, 0.58);
+  background-color: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.36), 0 0 24px rgba(56, 189, 248, 0.24);
+}
+
+.about-hover-card:hover::after {
+  animation: aboutEnergyRipple 700ms ease-out;
+}
+
+.network-mission .about-energy-ribbon {
+  animation-duration: 6.1s;
+}
+
+.network-mission .about-energy-conduit {
+  animation-duration: 4.9s;
+}
+
+.network-mission .about-network-spine {
+  animation-duration: 2.6s;
+}
+
+.network-mission .about-node-pulse {
+  animation-duration: 2s;
+}
+
+.network-drophab .about-energy-ribbon {
+  animation-duration: 7.4s;
+}
+
+.network-drophab .about-energy-conduit {
+  animation-duration: 5.8s;
+}
+
+.network-drophab .about-network-spine {
+  animation-duration: 3.2s;
+}
+
+.network-drophab .about-node-pulse {
+  animation-duration: 2.7s;
+}
+
+.network-readiness .about-energy-ribbon {
+  animation-duration: 6.6s;
+}
+
+.network-readiness .about-energy-conduit {
+  animation-duration: 5.1s;
+}
+
+.network-readiness .about-network-spine {
+  animation-duration: 2.9s;
+}
+
+.network-readiness .about-node-pulse {
+  animation-duration: 2.3s;
+}
+
+.network-faq .about-energy-ribbon {
+  animation-duration: 5.7s;
+}
+
+.network-faq .about-energy-conduit {
+  animation-duration: 4.5s;
+}
+
+.network-faq .about-network-spine {
+  animation-duration: 2.4s;
+}
+
+.network-faq .about-node-pulse {
+  animation-duration: 1.9s;
+}
+
+.animate-about-section {
+  opacity: 0;
+  animation: aboutSectionReveal 460ms ease-out both, aboutCardAura 4.8s ease-in-out infinite;
+}
+
+.animate-about-list-item {
+  opacity: 0;
+  animation: aboutSectionReveal 340ms ease-out both;
+}
+
+.animate-about-value-card {
+  opacity: 0;
+  animation: aboutSectionReveal 400ms ease-out both;
+}
+
+@keyframes contactAmberPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(245, 158, 11, 0);
+    background-color: rgba(245, 158, 11, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.28);
+    background-color: rgba(245, 158, 11, 0.18);
+  }
+}
+
+.contact-simplified-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(51, 65, 85, 0.72);
+  background: rgba(2, 6, 23, 0.78);
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.contact-simplified-card:hover {
+  border-color: rgba(251, 191, 36, 0.62);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25), 0 0 16px rgba(245, 158, 11, 0.2);
+}
+
+.contact-open-faq-pulse {
+  animation: contactAmberPulse 2.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker,
+  .animate-scanline,
+  .animate-boot-panel,
+  .animate-intro-scanline,
+  .animate-panel-rise,
+  .animate-telemetry-beat,
+  .animate-portal-flicker,
+  .animate-mission-card-load,
+  .animate-mission-row-reveal,
+  .animate-mission-bar-grow,
+  .about-energy-ribbon,
+  .about-energy-conduit,
+  .about-network-spine,
+  .about-node-pulse,
+  .animate-about-section,
+  .animate-about-list-item,
+  .animate-about-value-card,
+  .about-live-card {
+    animation: none !important;
+    opacity: 1;
+    transform: none !important;
+  }
+
+  .contact-open-faq-pulse {
+    animation: none !important;
+  }
+
+  .about-hover-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .about-hover-card::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
